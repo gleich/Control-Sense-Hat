@@ -4,8 +4,6 @@ from os import system
 import json
 from time import sleep
 
-import config
-
 os.chdir("./sense_hat_containerized")
 # Writing templates
 data_template = {
@@ -30,6 +28,7 @@ sense = SenseHat()
 sense.clear()
 while True:
     # Gathering data and writing to data.json
+    system("clear")
     data_template["temperature"] = sense.get_temperature()
     data_template["pressure"] = sense.get_pressure()
     data_template["humidity"] = sense.get_humidity()
@@ -42,7 +41,8 @@ while True:
     x = 0
     y = 0
     for pixel in led_matrix_config:
-        sense.set_pixel(x, y, pixel[0], pixel[1]. pixel[2])
+        sense.set_pixel(x, y, pixel[0], pixel[1], pixel[2])
+        print("Set pixel at ", x, y)
         if x == 7:
             x = 0
             y += 1
