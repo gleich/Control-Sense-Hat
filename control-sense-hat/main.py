@@ -4,7 +4,7 @@ from os import system
 import json
 from time import sleep
 
-system("sudo chmod u+w sense_hat_containerized")
+system("sudo chmod ugo+rwx sense_hat_containerized")
 os.chdir("./sense_hat_containerized")
 # Writing templates
 data_template = {
@@ -20,8 +20,8 @@ system("rm -rf data.json")
 system("rm -rf leds.json")
 system("touch data.json")
 system("touch leds.json")
-system("sudo chmod u+w data.json")
-system("sudo chmod u+w leds.json")
+system("sudo chmod ugo+rwx data.json")
+system("sudo chmod ugo+rwx leds.json")
 with open("data.json", "w") as data_json_init:
     json.dump(data_template, data_json_init)
 with open("leds.json", "w") as leds_json_init:
