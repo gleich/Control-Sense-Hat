@@ -6,4 +6,4 @@ services:
     build: .
     privileged: true
     volumes:
-      - ~/sense_hat_containerized:/control-sense-hat
+      - ~/sense_hat_containerized:/control-sense-hat/sense_hat_containerized
