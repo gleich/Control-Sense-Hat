@@ -1,0 +1,9 @@
+version: "3"
+
+services:
+  control-sense-hat:
+    container_name: control-sense-hat
+    build: .
+    privileged: true
+    volumes:
+      - ~/sense_hat_containerized:/control-sense-hat
