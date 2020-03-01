@@ -39,10 +39,9 @@ while True:
     for i in range(64):
         sense.set_pixel(
             x, y, led_matrix_config[i][0], led_matrix_config[i][1], led_matrix_config[i][2])
-        print("Set pixel at ", x, y)
         if x == 7:
             x = 0
             y += 1
         else:
             x += 1
-    sleep(1)
+    sleep(5)
