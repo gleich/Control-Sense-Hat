@@ -1,5 +1,7 @@
 # Control-Sense-Hat
 
+![Docker Pulls](https://img.shields.io/docker/pulls/mattgleich/control-sense-hat)
+
 Control you Raspberry Pi Sense hat from inside a docker container!
 
 ## Setup
