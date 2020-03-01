@@ -36,8 +36,9 @@ while True:
         led_matrix_config = json.load(leds_json)
     x = 0
     y = 0
-    for pixel in led_matrix_config:
-        sense.set_pixel(x, y, pixel[0], pixel[1], pixel[2])
+    for i in range(64):
+        sense.set_pixel(
+            x, y, led_matrix_config[i][0], led_matrix_config[i][1], led_matrix_config[i][2])
         print("Set pixel at ", x, y)
         if x == 7:
             x = 0
